@@ -44,7 +44,7 @@ func MustRegisterClientGoMetrics(registerer prometheus.Registerer) {
 		count: prometheus.NewCounterVec(
 			prometheus.CounterOpts{
 				Name: "prometheus_operator_kubernetes_client_http_requests_total",
-				Help: "Total number of Kubernetes's client requests by status code.",
+				Help: "Total number of Kubernetes client requests by status code.",
 			},
 			[]string{"status_code"},
 		),
@@ -62,7 +62,7 @@ func MustRegisterClientGoMetrics(registerer prometheus.Registerer) {
 		duration: prometheus.NewSummaryVec(
 			prometheus.SummaryOpts{
 				Name:       "prometheus_operator_kubernetes_client_rate_limiter_duration_seconds",
-				Help:       "Summary of latencies for the Kuberntes client's rate limiter by endpoint.",
+				Help:       "Summary of latencies for the Kubernetes client's rate limiter by endpoint.",
 				Objectives: map[float64]float64{},
 			},
 			[]string{"endpoint"},
